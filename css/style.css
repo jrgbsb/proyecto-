@@ -1,6 +1,4 @@
-/* ----------------------------
-   VARIABLES Y RESET BÁSICO
------------------------------ */
+@charset "UTF-8";
 :root {
   --color-principal: #004080;
   --color-secundario: #003060;
@@ -9,105 +7,95 @@
   --color-blanco: #ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-}
-
-/* ----------------------------
-   HEADER & NAV
------------------------------ */
-header {
+.navbar {
   background-color: var(--color-principal);
-  color: var(--color-blanco);
-  text-align: center;
-  padding: 20px;
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  background-color: var(--color-secundario);
-  padding: 10px;
-  margin-top: 10px;
-}
-
-nav ul li a {
+.navbar .navbar-brand {
   color: var(--color-blanco);
-  text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+}
+.navbar .nav-link {
+  color: var(--color-blanco);
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: var(--color-secundario);
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* ----------------------------
-   MAIN CONTENT
------------------------------ */
 main {
-  background-color: var(--color-blanco);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
+}
+main section {
+  background-color: var(--color-blanco);
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
 }
-
-img {
+main section:hover {
+  transform: translateY(-5px);
+}
+main section img {
   max-width: 100%;
   height: auto;
-  display: block;
+  border-radius: 4px;
   margin: 10px auto;
+}
+main .card {
+  background-color: var(--color-blanco);
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+main .card:hover {
+  transform: translateY(-5px);
+}
+main .card img {
+  max-width: 100%;
+  height: auto;
   border-radius: 4px;
 }
 
-/* ----------------------------
-   FORMULARIOS
------------------------------ */
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+/* Animación en títulos */
+h2 {
+  position: relative;
 }
-
-form input[type="submit"] {
+h2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
   background-color: var(--color-principal);
-  color: var(--color-blanco);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  margin-top: 5px;
+  animation: grow 1s forwards;
 }
 
-form input[type="submit"]:hover {
-  background-color: #002855;
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
 }
-
-/* ----------------------------
-   FOOTER
------------------------------ */
 footer {
   text-align: center;
-  background-color: var(--color-principal);
+  background-color: var(--color-secundario);
   color: var(--color-blanco);
   padding: 15px 10px;
-  margin-top: 40px;
 }
 
+/* Global */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

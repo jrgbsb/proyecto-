@@ -1,0 +1,24 @@
+@mixin flex-center($dir: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin card-style {
+  background-color: var(--color-blanco);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 15px;
+  transition: transform $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@mixin responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
