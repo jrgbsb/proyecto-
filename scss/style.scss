@@ -1,14 +1,5 @@
 @import 'variables';
 @import 'mixins';
 @import 'navbar';
-@import 'main';
-@import 'footer';
-
-/* Global */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  margin: 0;
-  padding: 0;
-}
+@import 'layout';
+@import 'components';

@@ -1,24 +1,21 @@
-@mixin flex-center($dir: row, $justify: center, $align: center) {
+@mixin flex($jc: center, $ai: center, $dir: row) {
   display: flex;
+  justify-content: $jc;
+  align-items: $ai;
   flex-direction: $dir;
-  justify-content: $justify;
-  align-items: $align;
 }
 
-@mixin card-style {
-  background-color: var(--color-blanco);
+@mixin card {
+  background: var(--color-blanco);
   border-radius: $radius;
   box-shadow: $shadow;
-  padding: 15px;
-  transition: transform $transition;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
+  padding: 1rem;
+  transition: transform $transition, box-shadow $transition;
+  &:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.12); }
 }
 
-@mixin responsive-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+@mixin respond($break) {
+  @if $break == sm { @media (max-width: 576px) { @content; } }
+  @else if $break == md { @media (max-width: 768px) { @content; } }
+  @else if $break == lg { @media (max-width: 992px) { @content; } }
 }

@@ -1,0 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.45;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container-main {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+header { margin-bottom: 1rem; }
+
+h1,h2,h3 { color: var(--color-principal); }
+h2 { margin-bottom: .6rem; position: relative;
+  &::after { content:""; display:block; height:4px; width:60px; background:var(--color-acento); margin-top:.5rem; border-radius:4px; animation: grow .6s ease; }
+}
+
+@keyframes grow { from { width:0 } to { width:60px } }
+
+footer {
+  background: var(--color-secundario);
+  color: var(--color-blanco);
+  padding: 1rem 0;
+  text-align:center;
+}

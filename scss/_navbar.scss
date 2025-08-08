@@ -1,17 +1,13 @@
 .navbar {
   background-color: var(--color-principal);
-
-  .navbar-brand {
-    color: var(--color-blanco);
-    font-weight: bold;
-  }
-
+  .navbar-brand { color: var(--color-blanco); font-weight:700; }
+  .navbar-toggler { border: none; }
   .nav-link {
-    color: var(--color-blanco);
-    transition: color $transition;
-
-    &:hover {
-      color: var(--color-secundario);
-    }
+    color: var(--color-blanco) !important;
+    font-weight: 600;
+    &:hover { color: var(--color-acento) !important; text-decoration: none; }
+  }
+  .active {
+    color: var(--color-acento) !important;
   }
 }

@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pasajes</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pasajes — Pasajes de Micro</title>
+  <meta name="description" content="Buscador y compra de pasajes de micro. Seleccioná fecha y destino y encontrá la mejor opción." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
       <div class="container">
         <a class="navbar-brand" href="../index.html">Pasajes de Micro</a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navMain">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
-            <li class="nav-item"><a class="nav-link" href="pasajes.html">Pasajes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="pasajes.html">Pasajes</a></li>
             <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           </ul>
@@ -30,35 +29,37 @@
     </nav>
   </header>
 
-  <main class="container my-5">
+  <main class="container-main">
     <h2>Comprar Pasajes</h2>
-    <form action="#" method="post" class="bg-light p-4 rounded shadow-sm">
-      <div class="mb-3">
-        <label for="origen" class="form-label">Origen</label>
-        <input type="text" class="form-control" id="origen" name="origen" required>
+    <form class="form-card mt-3" action="#" method="get" aria-label="Formulario de búsqueda de pasajes">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label for="origen" class="form-label">Origen</label>
+          <input id="origen" name="origen" type="text" placeholder="Ciudad de origen" required />
+        </div>
+        <div class="col-md-4">
+          <label for="destino" class="form-label">Destino</label>
+          <input id="destino" name="destino" type="text" placeholder="Ciudad destino" required />
+        </div>
+        <div class="col-md-4">
+          <label for="fecha" class="form-label">Fecha</label>
+          <input id="fecha" name="fecha" type="date" required />
+        </div>
       </div>
-
-      <div class="mb-3">
-        <label for="destino" class="form-label">Destino</label>
-        <input type="text" class="form-control" id="destino" name="destino" required>
+      <div class="mt-3">
+        <button class="btn btn-primary" type="submit">Buscar Pasajes</button>
       </div>
-
-      <div class="mb-3">
-        <label for="fecha" class="form-label">Fecha de viaje</label>
-        <input type="date" class="form-control" id="fecha" name="fecha" required>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Buscar Pasajes</button>
     </form>
   </main>
 
   <footer>
-    <p>© 2025 Pasajes de Micro</p>
+    <p class="mb-0">© 2025 Pasajes de Micro</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 

@@ -1,11 +1,13 @@
 :root {
   --color-principal: #004080;
+  --color-acento: #ff6f61;
   --color-secundario: #003060;
   --color-fondo: #f7f7f7;
-  --color-texto: #333;
+  --color-texto: #222;
   --color-blanco: #ffffff;
+  --max-width: 1200px;
 }
 
-$transition: 0.3s ease;
-$radius: 8px;
-$shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+$transition: 0.28s ease;
+$radius: 10px;
+$shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
