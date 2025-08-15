@@ -1,5 +1,190 @@
-@import 'variables';
-@import 'mixins';
-@import 'navbar';
-@import 'layout';
-@import 'components';
+/* Variables */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$text-color: #333;
+$font-stack: 'Roboto', sans-serif;
+
+/* Mixins */
+@mixin transition($props...) {
+  transition: $props 0.3s ease-in-out;
+}
+
+/* Global */
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  @include transition(color);
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+header {
+  background-color: $primary-color;
+  color: white;
+  nav {
+    ul.nav {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding-left: 0;
+    }
+    a {
+      color: white;
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background-color: $dark-color;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+/* Cards */
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  @include transition(transform);
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Forms */
+form {
+  .form-label {
+    font-weight: 500;
+  }
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  button {
+    background-color: $primary-color;
+    border: none;
+    color: white;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header nav ul.nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: $color-secundario;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: $color-blanco;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+// ----------------------------
+// MAIN
+// ----------------------------
+main {
+  background-color: $color-blanco;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+// ----------------------------
+// FORMULARIOS
+// ----------------------------
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input[type="submit"],
+form button {
+  background-color: $color-principal;
+  color: $color-blanco;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+  background-color: darken($color-principal, 15%);
+}
+
+// ----------------------------
+// FOOTER
+// ----------------------------
+footer {
+  text-align: center;
+  background-color: $color-principal;
+  color: $color-blanco;
+  padding: 15px 10px;
+  margin-top: 40px;
+}
+
+

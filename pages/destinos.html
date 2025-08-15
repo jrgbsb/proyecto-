@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Destinos — Pasajes de Micro</title>
-  <meta name="description" content="Destinos populares y rutas disponibles. Encuentra información y fotos sobre cada destino." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">Pasajes de Micro</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMain">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link active" href="destinos.html">Destinos</a></li>
-            <li class="nav-item"><a class="nav-link" href="pasajes.html">Pasajes</a></li>
-            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<body class="d-flex flex-column min-vh-100">
+  <header class="bg-primary text-white py-3">
+    <div class="container">
+      <h1>Destinos Imperdibles</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+          <li class="nav-item"><a href="destinos.html" class="nav-link text-white">Destinos</a></li>
+          <li class="nav-item"><a href="pasajes.html" class="nav-link text-white">Pasajes</a></li>
+          <li class="nav-item"><a href="nosotros.html" class="nav-link text-white">Nosotros</a></li>
+          <li class="nav-item"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="container-main">
-    <h2>Destinos Populares</h2>
-    <div class="row g-4 mt-3">
-      <div class="col-md-4">
-        <article class="card-destino" aria-labelledby="ba-title">
-          <img src="../images/caba.jpg" alt="Buenos Aires - Casa Rosada" loading="lazy"/>
-          <h3 id="ba-title">Buenos Aires</h3>
-          <p>Capital cultural y gastronómica del país.</p>
-        </article>
+  <main class="container my-5 flex-grow-1">
+    <section class="mb-5">
+      <h2>Los mejores destinos de Argentina</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../images/caba.jpg" class="card-img-top" alt="Ciudad de Buenos Aires">
+            <div class="card-body">
+              <h5 class="card-title">Buenos Aires</h5>
+              <p class="card-text">Cultura, gastronomía y vida urbana en la capital del país.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../images/bariloche.jpg" class="card-img-top" alt="Montañas nevadas de Bariloche">
+            <div class="card-body">
+              <h5 class="card-title">Bariloche</h5>
+              <p class="card-text">Un destino ideal para el invierno, nieve y paisajes inolvidables.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../images/Cataratas de iguazu.jpg" class="card-img-top" alt="Cataratas del Iguazú">
+            <div class="card-body">
+              <h5 class="card-title">Cataratas del Iguazú</h5>
+              <p class="card-text">Una maravilla natural en el corazón de la selva misionera.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <article class="card-destino" aria-labelledby="bar-title">
-          <img src="../images/bariloche.jpg" alt="Bariloche - lago y montañas" loading="lazy"/>
-          <h3 id="bar-title">Bariloche</h3>
-          <p>Ciudad de montaña, deportes y paisajes.</p>
-        </article>
-      </div>
-      <div class="col-md-4">
-        <article class="card-destino" aria-labelledby="igu-title">
-          <img src="../images/Cataratas de iguazu.jpg" alt="Cataratas del Iguazú" loading="lazy"/>
-          <h3 id="igu-title">Cataratas del Iguazú</h3>
-          <p>Un entorno natural único e inolvidable.</p>
-        </article>
-      </div>
-    </div>
+    </section>
+
+    <section class="mb-5">
+      <h3>Recomendaciones de viaje</h3>
+      <ul>
+        <li>Verificar el clima y la temporada.</li>
+        <li>Reservar alojamiento con antelación.</li>
+        <li>Probar la gastronomía local.</li>
+        <li>Llevar ropa y calzado cómodo.</li>
+      </ul>
+    </section>
   </main>
 
-  <footer>
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
     <p class="mb-0">© 2025 Pasajes de Micro</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
